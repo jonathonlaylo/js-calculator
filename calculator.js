@@ -16,9 +16,10 @@ function calculatorModule() {
    * @return { Number }    current total
    */
   calculator.load = function(x){
-      _total = x;
-      return _total;
+        _total = x;
+        return _total;
   };
+
 
   /**
    * Return the value of `total`
@@ -79,7 +80,7 @@ function calculatorModule() {
   /**
    * Clear the value stored at `memory`
    */
-   calculator.clearMemory = function(x){
+  calculator.clearMemory = function(x){
       _memory = 0;
    };
 
@@ -87,9 +88,10 @@ function calculatorModule() {
    * Validation
    */
   calculator.load = function(x){
-
+    if (x === "number"){
+      throw new Error();
+    }
   };
 
   return calculator;
-
 }
